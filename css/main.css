@@ -95,7 +95,7 @@ nav .inner .gnb a br {display: none;}
 .main_con {width: 100%; margin: 0 auto; padding: 0 2%;}
 .search_method {position: relative; width: 60rem; margin: 1rem auto; padding: 0 2%;}
 .search_method h2 {font-size: 1.5rem; font-weight: 600; color: #558ab7; cursor: pointer;}
-.search_method h2::before {content: ""; display: inline-block; background:url("../img/icon_info.png") no-repeat 50%; background-size: 1.7rem; width: 1.7rem; height: 1.7rem; margin-right: 0.5rem;}
+.search_method h2::before {content: ""; display: inline-block; background:url("../img/icon/icon_info.png") no-repeat 50%; background-size: 1.7rem; width: 1.7rem; height: 1.7rem; margin-right: 0.5rem;}
 .search_method h2:hover + .method_con {display: block;  z-index: 999;}
 .search_method .method_con {display: none; position: absolute; width: 95%; margin: 0.8rem 0; padding: 2rem 1.5rem; border-radius: 1rem; -webkit-box-shadow:0 0 5px #9ed4ff;-moz-box-shadow:0 0 5px #9ed4ff;box-shadow:0 0 5px #9ed4ff;border:1px solid #558ab7 !important; background-color: #fff;}
 .search_method .method_con ul {font-size: 1.1rem; list-style:inside; margin-bottom: 1%;line-height: 1.8; font-weight: 500;}
