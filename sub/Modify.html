@@ -1,0 +1,153 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="MobileOptimized" content="320">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="icon" href="icon/favicon.ico">
+        <title>엘리트2000</title>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="https://use.typekit.net/sea2nld.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- 상단 시작 { -->
+            <header>
+                <div class="header">
+                    <div class="inner">
+                        <div class="t_logo" alt="엘리트2000">
+                            <a href="./"></a>
+                        </div>
+                        <div class="tel_btn"></div>
+                        <div class="t_tel">
+                            <a href="tel :0316745581">031.674.5581</a>
+                        </div>
+                        <div class="util_btn">
+                            <input type="checkbox" id="util_btn" name="util_btn">
+                            <label for="util_btn" class="util_btn_label"></label>
+                            <ul id="util_nav">
+                                <li><a href="./sub/login/">로그아웃</a></li>
+                                <li><a href="./sub/Register/">정보수정</a></li>
+                            </ul>
+                        </div>
+                        <div class="util">
+                            <span><a href="./sub/login/">로그인</a></span>
+                            <span><a href="./sub/member/">회원가입</a></span>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="inner">
+                        <p class="gnb"><a href="./sub/SearchProduct/">내책팔기 <br>도서검색</a></p>
+                        <p class="gnb"><a href="./sub/cart/">내책팔기 <br>책바구니</a></p>
+                        <p class="gnb"><a href="./sub/Order_Board/">내책팔기 <br>진행현황</a></p>
+                    </div>
+                </nav>
+            </header>
+            <!-- } 상단 끝 -->
+            <main id="ct">
+                <div class="inner">
+                    <!-- 회원가입 시작 { -->
+                    <div class="sign_in">
+                        <form name="form-member" method="post">
+                            <div class="sign_in_form">
+                                <div class="sign_in_tit">기본정보</div>
+                    
+                                <div class="input_form">
+                                    <div class="form_group">
+                                        <div class="g_title">이름</div>
+                                        <input type="text" class="input_text" id="reg_mb_name" name="mb_name" value="" required />
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="g_title">아이디</div>
+                                        <div class="form_group_id">
+                                            <input type="text" id="reg_mb_id" name="mb_id" value="" class="chkld input_text" required minlength="3" maxlength="20">
+                                            <a href="" class="password_change"><button>비밀번호 변경</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <p class="g_title">이메일</p>
+                                        <input type="hidden" name="old_email" value="">
+                                        <input type="text" name="mb_email" value="" id="reg_mb_email" required maxlength="100" placeholder="이메일" />
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="g_title">연락처</div>
+                                        <div class="tel_group">
+                                            <input type="text" name="mb_tel1" value="" id="reg_mb_tel1" required  maxlength="3" placeholder="핸드폰 앞자리" >
+                                            <em>-</em>
+                                            <input type="text" name="mb_tel2" value="" id="reg_mb_tel2" required  maxlength="4" placeholder="번호를 입력하세요">
+                                            <em>-</em>
+                                            <input type="text" name="mb_tel3" value="" id="reg_mb_tel3" required  maxlength="4" placeholder="번호를 입력하세요">
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="g_title">수거 주소</div>
+                                        <div class="address">
+                                            <input type="text" id="address_zip" title="주소" name="addr1">
+                                            <button type="button" class="address_zip_btn" onclick="searchAddress(event)">우편번호 찾기</button>
+                                            <input type="text" title="상세 주소" name="addr2" placeholder="주소">
+                                            <input type="text" title="상세 주소" name="addr2" placeholder="상세 주소">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="sign_in_tit">정산정보</div>
+                            <div class="input_form">
+                                <div class="form_group">
+                                    <div class="g_title">은행명</div>
+                                    <div class="banking_info">
+                                        <select name='mb_1' id='mb_1' required ><option value='[002]산업은행' >산업은행</option><option value='[003]기업은행' >기업은행</option><option value='[004]국민은행' >국민은행</option><option value='[005]외환은행' >외환은행</option><option value='[007]수협은행' >수협은행</option><option value='[011]농협은행' >농협은행</option><option value='[012]농협중앙회' >농협중앙회</option><option value='[020]우리은행' >우리은행</option><option value='[023]SC제일은행' >SC제일은행</option><option value='[027]한국씨티은행' >한국씨티은행</option><option value='[031]대구은행' >대구은행</option><option value='[032]부산은행' >부산은행</option><option value='[034]광주은행' >광주은행</option><option value='[035]제주은행' >제주은행</option><option value='[037]전북은행' >전북은행</option><option value='[039]경남은행' >경남은행</option><option value='[045]새마을금고' >새마을금고</option><option value='[048]신협중앙회' >신협중앙회</option><option value='[064]산림조합' >산림조합</option><option value='[071]우체국' >우체국</option><option value='[081]하나은행' >하나은행</option><option value='[088]신한은행' >신한은행</option><option value='[089]K뱅크' >K뱅크</option><option value='[090]카카오뱅크' >카카오뱅크</option><option value='[092]토스뱅크' >토스뱅크</option><option value='[209]동양종금증권' >동양종금증권</option><option value='[218]현대증권' >현대증권</option><option value='[230]미래에셋' >미래에셋</option><option value='[238]대우증권' >대우증권</option><option value='[240]삼성증권' >삼성증권</option><option value='[243]한국투자증권' >한국투자증권</option><option value='[247]우리투자증권' >우리투자증권</option><option value='[262]하이증권' >하이증권</option><option value='[263]HMC증권' >HMC증권</option><option value='[267]대신증권' >대신증권</option><option value='[266]SK증권' >SK증권</option><option value='[270]하나대투증권' >하나대투증권</option><option value='[278]신한금융투자' >신한금융투자</option><option value='[279]동부증권' >동부증권</option><option value='[280]유진증권' >유진증권</option><option value='[287]메리츠증권' >메리츠증권</option><option value='[291]신영증권' >신영증권</option></select>				<div class="btnVerifyOk" style="display:none;">계좌인증완료</div>
+                                        <button type="button" id="btnVerify" class="btn_verify">계좌확인</button>
+                                        <input type="hidden" name="chk_account" id="chk_account" value="">
+                                        <input type="text" value name="mb_2" id="mb_2" class="owner" maxlength="10" required placeholder="예금주" />
+                                        <!-- 계좌번호 수정 부분-->
+                                        <input type="text" value name="mb_3" id="mb_3" class="banking input_text" maxlength="20" required placeholder="계좌번호 숫자만 입력해주세요" />
+                                        <span class="banking_caution"> &#8251; 계좌번호는 하이픈&#40;&#45;&#41; 빼고 숫자만 입력해주세요.</span>
+                                        <!-- 계좌번호 수정 부분 끝-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sign_in_btn">
+                                <button type="submit" class="btn_close"><a href="./">취소</a></button>
+                                <button type="submit" class="btn_submit" accesskey="s">정보수정</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- } 회원가입 끝 -->
+                </div>
+            </main>
+            <!-- 하단 시작 { -->
+            <div class="footer">
+                <div class="inner">
+                    <div class="f_logo" alt="엘리트2000"><a href="./"></a></div>
+                    <div class="customer">
+                        <div class="cs">고객센터 <br> <span>031 - 674 - 5581</span></div>
+                        <ul class="cs_list">
+                            <li><span>평일</span>10:00 ~ 17:00</li>
+                            <li><span>휴게시간</span>12:00 ~ 13:00</li>
+                            <li><span>휴무일</span>주말 및 공휴일</li>
+                        </ul>
+                    </div>
+                    <div class="f_Menu">
+                        <span><a href="./sub/company/">회사소개</a></span>
+                        <span><a href="./sub/provision/">이용약관</a></span>
+                        <span><a href="./sub/privacy/">개인정보취급방침</a></span>
+                    </div>
+                    <div class="f_info">
+                        <span>(주)엘리트북</span>
+                        <span>대표 : 김범진</span>
+                        <span>개인정보관리책임자 : 김범진</span>
+                        <br>
+                        <span>사업자등록번호 : 126-86-82050</span>
+                        <span>경기도 안성시 일죽면 장암리 204</span>
+                    </div>
+                    <p class="copyright">ⓒ COPYRIGHT 엘리트2000. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+            <!-- } 하단 끝 -->
+        </div>
+    </body>
+</html>
