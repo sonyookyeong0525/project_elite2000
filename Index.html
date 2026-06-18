@@ -1,0 +1,222 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="MobileOptimized" content="320">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="icon" href="icon/favicon.ico">
+        <title>엘리트2000</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.typekit.net/sea2nld.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- 상단 시작 { -->
+            <header>
+                <div class="header">
+                    <div class="inner">
+                        <div class="t_logo" alt="엘리트2000">
+                            <a href="#"></a>
+                        </div>
+                        <div class="tel_btn"></div>
+                        <div class="t_tel">
+                            <a href="tel :0316745581">031.674.5581</a>
+                        </div>
+                        <div class="util_btn">
+                            <input type="checkbox" id="util_btn" name="util_btn">
+                            <label for="util_btn" class="util_btn_label"></label>
+                            <ul id="util_nav">
+                                <li><a href="./sub/login/">로그아웃</a></li>
+                                <li><a href="./sub/Register/">정보수정</a></li>
+                            </ul>
+                        </div>
+                        <div class="util">
+                            <span><a href="./sub/login/">로그인</a></span>
+                            <span><a href="./sub/member/">회원가입</a></span>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="inner">
+                        <p class="gnb"><a href="./sub/SearchProduct/">내책팔기 <br>도서검색</a></p>
+                        <p class="gnb"><a href="./sub/cart/">내책팔기 <br>책바구니</a></p>
+                        <p class="gnb"><a href="./sub/Order_Board/">내책팔기 <br>진행현황</a></p>
+                    </div>
+                </nav>
+            </header>
+            <!-- } 상단 끝 -->
+            <main id="ct">
+                <div class="inner">
+                    <div class="main_con">
+                        <div class="search_method">
+                            <h2>검색방법 안내</h2>
+                            <!--문구 수정 2025-07-22 -->
+                            <div class="method_con">
+                                <ul>
+                                    <li>
+                                        정확한 도서명 또는 책 뒷면에 있는 ISBN 으로 검색해 주세요.
+                                    </li>
+                                    <li>
+                                        판매할 도서 검색 후 도서 정가 및 출간일을 비교해 주시기 바랍니다.
+                                    </li>
+                                    <li>
+                                        신청하신 상품과 실제 도착한 상품이 일치하지 않으면 매입불가 가능성 있습니다.
+                                    </li>
+                                </ul>
+                                <p>
+                                    일반 도서 외에 초등·중등·고등 참고서/자습서/교과서 등 진학을 하게 되면 필요 없어지는 도서도 매입 가능합니다. <br>
+                                    ※ 훼손이나 오염, 낙서 및 밑줄 등의 흔적이 있는 도서는 매입 불가입니다.    
+                                </p>
+                                <p>
+                                    아직 초기단계로 매입 도서의 정보가 한정적이나, 향후 물류센터 보강 후 국내에서 발행된 모든 도서를 매입하고자함이 저희의 목표입니다.
+                                    (적정 재고 시스템에 의해 특정 도서는 일시적 매입이 중지 될 수 있음을 양해 부탁드립니다.)
+                                </p>
+                            </div>
+                            <!--문구 수정 2025-07-22 -->
+                        </div>                    
+                        <div class="main_search">
+                            <form name="searchFrm" id="searchFrm" onsubmit="return search_Frm(this.form)">
+                                <select name="sfl" id="sfl">
+                                    <option value="all">통합검색</option>
+                                    <option value="it_name">도서명</option>
+                                    <option value="it_1">ISBN</option>
+                                    <option value="it_maker">저자</option>
+                                    <option value="it_brand">출판사</option>
+                                </select>
+                                <input type="text" id="stx" name="stx" required="" placeholder="도서명, ISBN, 저자, 출판사로 도서를 검색할 수 있습니다.">
+                                <button>검색</button>
+                            </form>
+                        </div>
+                        <div class="group_wrap">
+                            <h2>분류별 한 눈에 보기</h2>
+                            <!-- 2025-04-25 평가문제집만 뺐습니다....-->
+                            <div class="group_menu">
+                                <div class="group_menu_ul">
+                                    <h2>참고서</h2>
+                                    <ul>
+                                        <a href=""><li>초등</li></a>
+                                        <a href=""><li>중등</li></a>
+                                        <a href=""><li>고등</li></a>
+                                    </ul>
+                                </div>
+                                <div class="group_menu_ul">
+                                    <h2>교과서</h2>
+                                    <ul>
+                                        <a href=""><li>초등</li></a>
+                                        <a href=""><li>중등</li></a>
+                                        <a href=""><li>고등</li></a>
+                                    </ul>
+                                </div>
+                                <div class="group_menu_ul">
+                                    <h2>자습서</h2>
+                                    <ul>
+                                        <a href=""><li>초등</li></a>
+                                        <a href=""><li>중등</li></a>
+                                        <a href=""><li>고등</li></a>
+                                    </ul>
+                                </div>
+                                <div class="group_menu_ul">
+                                    <h2>좋은책신사고</h2>
+                                    <ul>
+                                        <a href=""><li>초등</li></a>
+                                        <a href=""><li>중등</li></a>
+                                        <a href=""><li>고등</li></a>
+                                    </ul>
+                                </div>
+                                <div class="group_menu_ul">
+                                    <h2>방송통신대학</h2>
+                                    <ul>
+                                        <a href=""><li>참고서</li></a>
+                                        <a href=""><li>교재</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buy_site">
+                            <h2>중고 도서 구입 링크</h2>
+                            <!-- 구입 링크 설명 2025-04-11 -->
+                            <p>
+                                자사의 중고 도서 구매 사이트 <span class="p_span1">"엘리트 2000"</span>이 현재 사이트 리뉴얼 작업으로 도서 구입이 <span class="p_span3">불가</span>합니다.
+                                <br>
+                                <span class="p_span2">아래 링크를 통하여 오픈마켓에서 원하시는 도서를 구매 부탁드립니다.</span>
+                                <br>
+                                <span style="font-weight: 500;">(8만 종 20만 권 보유 중)</span>
+                            </p>
+                            <!-- 구입 링크 설명 끝 2025-04-11 -->
+                            <div class="buy_site_wrap">
+                                <div class="buy_site_list">
+                                    <div class="buy_site_box">
+                                        <span class="buy_site_icon"><a href="https://shop.11st.co.kr/stores/318122"><img src="img/icon/11st.png"></a></span>
+                                    </div>
+                                    <div class="buy_site_box">
+                                        <span class="buy_site_icon"><a href="https://minishop.gmarket.co.kr/bookelite"><img src="img/icon/gmarket.png"></a></span>
+                                    </div>
+                                    <div class="buy_site_box">
+                                        <span class="buy_site_icon"><a href="https://stores.auction.co.kr/elite2000"><img src="img/icon/auction.png"></a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_notice">
+                            <h2>공지사항</h2>
+                            <ul>
+                                <li><a href="./sub/usemethod/">내책팔기<br> 이용안내</a></li>
+                                <li><a href="./sub/provision/">이용약관 <br>안내</a></li>
+                                <li><a href="./sub/privacy/">개인정보처리방침 <br>안내</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- 하단 시작 { -->
+            <div class="footer">
+                <div class="inner">
+                    <div class="f_logo" alt="엘리트2000"><a href="#"></a></div>
+                    <div class="customer">
+                        <div class="cs">고객센터 <br> <span>031 - 674 - 5581</span></div>
+                        <ul class="cs_list">
+                            <li><span>평일</span>10:00 ~ 17:00</li>
+                            <li><span>휴게시간</span>12:00 ~ 13:00</li>
+                            <li><span>휴무일</span>주말 및 공휴일</li>
+                        </ul>
+                    </div>
+                    <div class="f_Menu">
+                        <span><a href="./sub/company/">회사소개</a></span>
+                        <span><a href="./sub/provision/">이용약관</a></span>
+                        <span><a href="./sub/privacy/">개인정보취급방침</a></span>
+                    </div>
+                    <div class="f_info">
+                        <span>(주)엘리트북</span>
+                        <span>대표 : 신효순</span>
+                        <span>개인정보관리책임자 : 신효순</span>
+                        <br>
+                        <span>사업자등록번호 : 126-86-82050</span>
+                        <span>경기도 안성시 일죽면 장암리 204</span>
+                        <!--추가 시작-->
+                        <br>
+                        <span>통신판매업 : 제 2021-고양일산동-2866 호</span>
+                        <!--추가 끝-->
+                    </div>
+                    <p class="copyright">ⓒ COPYRIGHT 엘리트2000. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+            <!-- } 하단 끝 -->
+        </div>
+        <script>
+            const menuItems = document.querySelectorAll('.buy_site_box');
+
+            let previousSelectedItem = menuItems[0];
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    previousSelectedItem?.classList.remove('buy_site_active')
+                    previousSelectedItem = item;
+                    item.classList.add('buy_site_active');
+                })
+            })
+        </script>
+    </body>
+</html>
